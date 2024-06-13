@@ -1,6 +1,7 @@
 //seleziono il contenitore ed il bottone
 const container = document.getElementById("grid");
 const myBtn = document.querySelector("button");
+let alreadyPlayed = false;
 
 // L’utente clicca su un bottone che genererà una griglia di gioco quadrata.
 myBtn.addEventListener("click",generateGrid);
@@ -14,15 +15,19 @@ myBtn.addEventListener("click",generateGrid);
 
 //Funzione Grid Generator
 function generateGrid() {
-    //aggiungo i blocchi per 100 volte
+    if(alreadyPlayed === false){
+        //aggiungo i blocchi per 100 volte
     for(let i = 0; i < 100; i++) {
-    //creo uno square
-    const nuovobox = createElementWithClass("div", "square");
-    //aggiungo il blocco al contenitore
-    container.append(nuovobox);
-    }   
-    //Invoco funzione add class
-    addClass();
+        //creo uno square
+        const nuovobox = createElementWithClass("div", "square");
+        //aggiungo il blocco al contenitore
+        container.append(nuovobox);
+        }   
+        //Invoco funzione add class
+        addClass();
+        //cambio stato variabile
+        alreadyPlayed = true;
+    }     
 }
 
 
