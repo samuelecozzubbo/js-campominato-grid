@@ -12,6 +12,8 @@
 }
 
 .main-title{
+    max-width: 1200px;
+    margin: 0 auto;
     color: white;
     text-align: center;
     font-size: 2em;
@@ -21,4 +23,17 @@ button{
     padding: 5px 10px;
     font-size: 20px;
     border-radius: 8px;
+}
+
+#grid{
+    max-width: 35%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.square{
+    width: calc(100% / 10);
+    aspect-ratio: 1;
+    border: solid 2px white;
 }
