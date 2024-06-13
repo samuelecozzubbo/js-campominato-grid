@@ -43,7 +43,7 @@ function addClass() {
     for(let i = 0; i < 100; i++) {
     //Gestisco il click sul singolo elemento
     console.log(box);
-    box.addEventListener("click",
+    box[i].addEventListener("click",
         function(){
             this.classList.toggle("clicked");
         }

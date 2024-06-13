@@ -37,3 +37,7 @@ button{
     aspect-ratio: 1;
     border: solid 2px white;
 }
+
+.clicked{
+    background-color: #7FFFD4;
+}
