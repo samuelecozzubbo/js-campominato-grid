@@ -22,6 +22,7 @@ function generateGrid() {
         const nuovobox = createElementWithClass("div", "square");
         //aggiungo il blocco al contenitore
         container.append(nuovobox);
+        nuovobox.append(i);
         }   
         //Invoco funzione add class
         addClass();
@@ -47,10 +48,10 @@ function addClass() {
     const box = document.querySelectorAll(".square");
     for(let i = 0; i < 100; i++) {
     //Gestisco il click sul singolo elemento
-    console.log(box);
     box[i].addEventListener("click",
         function(){
             this.classList.toggle("clicked");
+            console.log("Hai cliccato il box",i + 1);
         }
     );
     }   

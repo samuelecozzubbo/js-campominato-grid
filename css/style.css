@@ -37,6 +37,7 @@ button{
     width: calc(100% / 10);
     aspect-ratio: 1;
     border: solid 2px white;
+    color: white;
 }
 
 .clicked{
