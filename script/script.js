@@ -6,12 +6,7 @@ const myBtn = document.querySelector("button");
 myBtn.addEventListener("click",generateGrid);
 // Ogni cella ha un numero progressivo, da 1 a 100.
 // Ci saranno quindi 10 caselle per ognuna delle 10 righe.
-
-
-
-
 // Quando l’utente clicca su ogni cella, la cella cliccata si colora di azzurro ed emetto un messaggio in console con il numero della cella cliccata.
-
 
 /*************** 
     FUNZIONI
@@ -25,7 +20,6 @@ function generateGrid() {
     const nuovobox = createElementWithClass("div", "square");
     //aggiungo il blocco al contenitore
     container.append(nuovobox);
-    
     }   
 }
 
@@ -38,4 +32,19 @@ function createElementWithClass(tag, classToAdd) {
     element.classList.add(classToAdd);
 
     return element;
+}
+
+
+//Funzione add class 
+function addClass() {
+    for(let i = 0; i < 100; i++) {
+    //Gestisco il click sul singolo elemento
+    const box = document.querySelector(".square");
+    console.log(box);
+    box.addEventListener("click",
+        function(){
+            this.classList.toggle("clicked");
+        }
+    );
+    }   
 }
